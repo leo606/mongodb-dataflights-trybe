@@ -1,8 +1,10 @@
+const EMPRESA_NAME = "PASSAREDO";
+
 db.resumoVoos.insertOne({
-  empresa: "PASSAREDO",
+  empresa: EMPRESA_NAME,
   totalVoosDomesticos: db.voos.find(
   {
-    "empresa.nome": "PASSAREDO",
+    "empresa.nome": EMPRESA_NAME,
     natureza: "Doméstica",
   },
 ).count(),
@@ -10,7 +12,7 @@ db.resumoVoos.insertOne({
 
 db.resumoVoos.findOne(
   {
-    empresa: "PASSAREDO",
+    empresa: EMPRESA_NAME,
   },
   {
     _id: 0,
