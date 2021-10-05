@@ -1,5 +1,4 @@
 const EMPRESA_NAME = "LATAM AIRLINES BRASIL";
-
 db.resumoVoos.insertOne({
   empresa: EMPRESA_NAME,
   totalVoosDomesticos: db.voos.find(
